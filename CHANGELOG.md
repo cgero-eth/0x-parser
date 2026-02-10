@@ -1,5 +1,99 @@
 # Changelog
 
+## [2.5.0](https://github.com/cgero-eth/0x-parser/compare/v2.14.0...v2.5.0) (2026-02-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate project to 0x v2 & settler
+* viem as peer dependency
+
+### deps
+
+* upgrade to viem v2 ([6a51a5f](https://github.com/cgero-eth/0x-parser/commit/6a51a5f3c67a8c54d5aa74dbd368ba3b32ce130b))
+
+
+### Features
+
+* add base support ([c4f9f4d](https://github.com/cgero-eth/0x-parser/commit/c4f9f4dafc791ab193c53e56a2b273922f0041e3))
+* add last transfer heuristic for transactions which fail to parse ([#93](https://github.com/cgero-eth/0x-parser/issues/93)) ([f68007e](https://github.com/cgero-eth/0x-parser/commit/f68007ef00637b4d65e8f762aa4a0af0c9cae3d0))
+* add new addresses for permitandcall ([4cc8f86](https://github.com/cgero-eth/0x-parser/commit/4cc8f862267319f7ff0ad3351350a3cb94bff4ce))
+* add support for Abstract chain ([#97](https://github.com/cgero-eth/0x-parser/issues/97)) ([c51a61c](https://github.com/cgero-eth/0x-parser/commit/c51a61c8aac597cbd6835ad09a84a0998df8456b))
+* add support for monad ([#90](https://github.com/cgero-eth/0x-parser/issues/90)) ([ee12c85](https://github.com/cgero-eth/0x-parser/commit/ee12c8577ec44343c98003e9ef1dbe34b50bab7e))
+* export core types ([5751674](https://github.com/cgero-eth/0x-parser/commit/5751674a15ba2d7e4f037e44bf6dc4235e830e01))
+* introduce executeMetaTransactionV2 ([b51afd0](https://github.com/cgero-eth/0x-parser/commit/b51afd0f3b9116b2b19b742781e9b0d4e5ac1df6))
+* introduce mantle support ([182c90f](https://github.com/cgero-eth/0x-parser/commit/182c90f9706db1fd0ee8205825df706e97d4315f))
+* introduce parseSwapV2 for Settler ([a15fcc4](https://github.com/cgero-eth/0x-parser/commit/a15fcc4a4d6b217d1679bc14ef5f9b84a20ba220))
+* introduce support for plasma ([#88](https://github.com/cgero-eth/0x-parser/issues/88)) ([ac85b13](https://github.com/cgero-eth/0x-parser/commit/ac85b13a75bda7650b533a6e604d7124228f4aec))
+* introduce viem + remove ethers ([1432283](https://github.com/cgero-eth/0x-parser/commit/14322832bc9a2a1717dddb2aef7285b8da2e4499))
+* log warning for reverted transactions ([4d0ab07](https://github.com/cgero-eth/0x-parser/commit/4d0ab07afc53e39ab607f22a8cca21e976197ca2))
+* migrate project to 0x v2 & settler ([ec87786](https://github.com/cgero-eth/0x-parser/commit/ec877868564da53db540c0af4688dd92b4818630))
+* rewrite api interface ([b7d90e5](https://github.com/cgero-eth/0x-parser/commit/b7d90e5a975af857110361d2aea403dc1d1e38a7))
+* support linea + update polygon native symbol ([f2ff8c4](https://github.com/cgero-eth/0x-parser/commit/f2ff8c46c95efbcaa4760024de3af456b000b852))
+* support mode ([3ad4ea3](https://github.com/cgero-eth/0x-parser/commit/3ad4ea3bcd53f5661788cd5224a5f3e606952e74))
+* support new chain, blast ([410971b](https://github.com/cgero-eth/0x-parser/commit/410971b18111c6c69351eb0e1d1edb2203af48a0))
+* support new chain, scroll ([5f5bed4](https://github.com/cgero-eth/0x-parser/commit/5f5bed4b72ac8975a55a70fb94adb2d2ed924260))
+* support parsing erc-4337 transactions ([373d143](https://github.com/cgero-eth/0x-parser/commit/373d14304a118eee1d73f686ff98cf4639b3719a))
+* support parsing transactions on berachain ([34900e7](https://github.com/cgero-eth/0x-parser/commit/34900e74ef87b1555b2078b736c5e8eac3fb40e0))
+* the initial commit ([5add299](https://github.com/cgero-eth/0x-parser/commit/5add29978a6192937a0f9e357381c2e676cc6397))
+* unichain support ([0f49539](https://github.com/cgero-eth/0x-parser/commit/0f4953917e56127949abfe9a06bda8003384c7c1))
+* update dependencies ([#86](https://github.com/cgero-eth/0x-parser/issues/86)) ([e84596f](https://github.com/cgero-eth/0x-parser/commit/e84596f19fa50b8d8ffbe082ab7f9d89df07a22b))
+* update executeMetaTransactionV2 &  transformERC20 ([4ec05c2](https://github.com/cgero-eth/0x-parser/commit/4ec05c251489d4e13a56329a99cd5d94588a8fb7))
+* viem as peer dependency ([f8c2239](https://github.com/cgero-eth/0x-parser/commit/f8c2239d05a142ec2c8956c1b74ce47aa72eed78))
+* worldchain support ([8186963](https://github.com/cgero-eth/0x-parser/commit/8186963ab8a5e91b1a1c51cd1dc0f81fa6f7fa86))
+
+
+### Bug Fixes
+
+* account for identical permitAndCall function names ([1ead225](https://github.com/cgero-eth/0x-parser/commit/1ead2257e3d04e6bdf875c7e6dd8f64e8e80b304))
+* account for msgSender for metaTxn is used with multicall ([d5c94d6](https://github.com/cgero-eth/0x-parser/commit/d5c94d6fa2b8438d99a9f779d918372437ebb215))
+* account for native token transfer & meta transactions ([2f65804](https://github.com/cgero-eth/0x-parser/commit/2f65804762688c233d6960292ae33a01a82ab138))
+* added batch call + delete useless on-chain call ([#75](https://github.com/cgero-eth/0x-parser/issues/75)) ([bce9f9f](https://github.com/cgero-eth/0x-parser/commit/bce9f9fa08aec3723c13158296770e67e26cb021))
+* bnb txs that do not transfer tokens to taker ([a1940e3](https://github.com/cgero-eth/0x-parser/commit/a1940e3d50de88d5fe7ba95fdac501ef77d09585))
+* ensure output values exist ([0c3dc98](https://github.com/cgero-eth/0x-parser/commit/0c3dc98f98e5948a5561fc7e1bac976dafc7f4be))
+* erc-20 transfers for SettlerMetaTxn ([329a1fd](https://github.com/cgero-eth/0x-parser/commit/329a1fdf9654527cd5f10634bffc50c9e9f0b0c4))
+* filter from logs from taker for initial input ([fb218e5](https://github.com/cgero-eth/0x-parser/commit/fb218e5e50c59ac66eef36d33167fb1c772d5211))
+* handle permitAndCall function overload ([34d01c9](https://github.com/cgero-eth/0x-parser/commit/34d01c93b94b84fcb60feff29573df26afbbd80e))
+* handle zero transfer events for sellToPancakeSwap ([4ea566a](https://github.com/cgero-eth/0x-parser/commit/4ea566aa5a2b3d934ec3779f473fde945e7b2781))
+* latest TS requires specific rootDir ([55b0dbc](https://github.com/cgero-eth/0x-parser/commit/55b0dbcc90a50fae747e9ed53b8bce52165f4898))
+* native transfers with SettlerMetaTxn ([1d659a6](https://github.com/cgero-eth/0x-parser/commit/1d659a6f01db14f409f6f8f117189d06809e1b4f))
+* parse latest executeMetaTxn from base ([f6a825c](https://github.com/cgero-eth/0x-parser/commit/f6a825c79a0f47efcf85209a2ba8c4673caa9b36))
+* reduce rpc call for transformERC20 by one ([7803fb5](https://github.com/cgero-eth/0x-parser/commit/7803fb5d617811452091dbd1be43241f446a0b2b))
+* reduce rpc calls for multiplexBatchSellTokenForToken by 80% ([03c0a04](https://github.com/cgero-eth/0x-parser/commit/03c0a0411567d0330b6e94fbc09e42799ed1252f))
+* remove exchange proxy abi from bundle... ([2b6e6f8](https://github.com/cgero-eth/0x-parser/commit/2b6e6f889e147f977785c1c402866b6401ec3afc))
+* remove hardcoded settler meta txn contract ([70893de](https://github.com/cgero-eth/0x-parser/commit/70893de6c03e3041655bacf4cc75fa3750737e8c))
+* return null for smart contract wallet reverts ([bcd9730](https://github.com/cgero-eth/0x-parser/commit/bcd9730f4ced823d7e9c3aefad6067918f9ecc47))
+* sum total amount leaving the taker's account ([3fa9001](https://github.com/cgero-eth/0x-parser/commit/3fa90016a7e8da46690ec539611d71dc0dfb7a44)), closes [#72](https://github.com/cgero-eth/0x-parser/issues/72)
+* support multihop for sellToUniswap ([5128e75](https://github.com/cgero-eth/0x-parser/commit/5128e754eaec4755361a12a75c2d7c2a6b779f17))
+* support sellEthForTokenToUniswapV3 multihop ([06f7faf](https://github.com/cgero-eth/0x-parser/commit/06f7fafb89cabba0bc58f8331222bf4c346231d1))
+* unwrap metatransaction from permitAndCall ([7aaa97b](https://github.com/cgero-eth/0x-parser/commit/7aaa97b4d6d5a23173223f0bc78dab31e4737781))
+* use correct taker for meta transaction ([70caa91](https://github.com/cgero-eth/0x-parser/commit/70caa914995ddca04785e9f5dadfdcc185d34f09))
+* use exchange proxy address by chain id ([b3bbb88](https://github.com/cgero-eth/0x-parser/commit/b3bbb88c2f866c04090144c7081ae24e04c61f93))
+* use log that has taker from transfer for meta txn ([9020b47](https://github.com/cgero-eth/0x-parser/commit/9020b4710001f380ccc3841aeed219db85fc7018))
+* use logs if taker received found in logs ([ef27691](https://github.com/cgero-eth/0x-parser/commit/ef27691991fb63238e7f853ece90d10d93dd0f8f))
+* use native asset for parsers that need it ([ae82504](https://github.com/cgero-eth/0x-parser/commit/ae82504533dc249f849dab73e6f898a0d9663ac1))
+* use output log that has WETH for sellTokenForEthToUniswapV3 ([7660957](https://github.com/cgero-eth/0x-parser/commit/76609578159e64b70a9b3963041d8f7c87013364))
+* use quicknode provider for test on Abstract chain ([#99](https://github.com/cgero-eth/0x-parser/issues/99)) ([cd4ae5e](https://github.com/cgero-eth/0x-parser/commit/cd4ae5e39b38016234f95ed9e7da4ca0340ed94a))
+
+
+### Performance Improvements
+
+* parallelize rpc calls ([101172b](https://github.com/cgero-eth/0x-parser/commit/101172b77f99ce1c36742ea4e12e3584248009cf))
+
+
+### Miscellaneous Chores
+
+* upgrade deps ([1695559](https://github.com/cgero-eth/0x-parser/commit/1695559ae3d911b8d185c45dc166204fc9a45f78))
+
+
+### Build System
+
+* expand node support & update deps ([48f3d24](https://github.com/cgero-eth/0x-parser/commit/48f3d24616172a8c435a847c3e70952a15cf2563))
+* fix location of type declarations ([b38e8d5](https://github.com/cgero-eth/0x-parser/commit/b38e8d5bb637ad18fb04a00ae45f2c35877e154d))
+* update esbuild minification for nextjs ([26764e1](https://github.com/cgero-eth/0x-parser/commit/26764e1cbb7fb0dce5a14052ac02f0feafb13017))
+* update type declarations ([68f609a](https://github.com/cgero-eth/0x-parser/commit/68f609adb15e4e1c3f54b5a79ae2d97d804d318f))
+* update type declarations ([102befd](https://github.com/cgero-eth/0x-parser/commit/102befd82bdc904a0be0ebe0e63506bf9bfaa3d5))
+
 ## [2.14.0](https://github.com/0xProject/0x-parser/compare/v2.13.0...v2.14.0) (2026-01-27)
 
 
