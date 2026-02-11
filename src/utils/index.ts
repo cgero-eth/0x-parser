@@ -18,6 +18,7 @@ import {
   worldchain,
   monad,
   abstract,
+  tempo,
 } from "viem/chains";
 import { NATIVE_SYMBOL_BY_CHAIN_ID, NATIVE_TOKEN_ADDRESS } from "../constants";
 import type { Address } from "viem";
@@ -50,6 +51,7 @@ export function isChainIdSupported(
     berachain.id,
     worldchain.id,
     abstract.id,
+    tempo.id,
   ];
   return supportedChainIds.includes(chainId);
 }

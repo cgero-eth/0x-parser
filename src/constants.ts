@@ -17,6 +17,7 @@ import {
   worldchain,
   monad,
   abstract,
+  tempo,
 } from "viem/chains";
 import type { SupportedChainId } from "./types";
 
@@ -134,6 +135,7 @@ export const SUPPORTED_CHAINS = [
   worldchain,
   monad,
   abstract,
+  tempo,
 ];
 
 export const NATIVE_SYMBOL_BY_CHAIN_ID: { [key in SupportedChainId]: string } =
@@ -156,6 +158,7 @@ export const NATIVE_SYMBOL_BY_CHAIN_ID: { [key in SupportedChainId]: string } =
     [berachain.id]: berachain.nativeCurrency.symbol,
     [worldchain.id]: worldchain.nativeCurrency.symbol,
     [abstract.id]: abstract.nativeCurrency.symbol,
+    [tempo.id]: tempo.nativeCurrency.symbol,
   };
 
 export const NATIVE_TOKEN_ADDRESS = `0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE`;

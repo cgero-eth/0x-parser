@@ -126,6 +126,12 @@
   <tr>
     <td style="width:100px; text-align:center;">
       <div align="center">
+        <img alt="Tempo" src="https://tempo.xyz/favicon-dark.svg" width="24"/>
+        <br>Tempo
+      </div>
+    </td>
+    <td style="width:100px; text-align:center;">
+      <div align="center">
         <img alt="coming soon" src="https://i.imgur.com/CexTjqF.png" width="22"/>
         <br>🔜
       </div>
