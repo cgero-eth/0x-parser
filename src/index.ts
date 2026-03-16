@@ -241,12 +241,13 @@ export async function parseSwap({
         (acc, curr) => ({
           symbol: curr.symbol,
           amount: formatUnits(
-            BigInt(acc.amount) + parseUnits(curr.amount, curr.decimals),
+            acc.amountRaw + curr.amountRaw,
             curr.decimals
           ),
+          amountRaw: acc.amountRaw + curr.amountRaw,
           address: curr.address,
         }),
-        { symbol: "", amount: "", address: "" }
+        { symbol: "", amount: "", amountRaw: 0n, address: "" }
       );
 
     return {
@@ -255,7 +256,11 @@ export async function parseSwap({
         address: NATIVE_TOKEN_ADDRESS,
         amount: nativeSellAmount,
       },
-      tokenOut,
+      tokenOut: {
+        symbol: tokenOut.symbol,
+        amount: tokenOut.amount,
+        address: tokenOut.address,
+      },
     };
   }
 
